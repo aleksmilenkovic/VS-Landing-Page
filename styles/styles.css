@@ -190,6 +190,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -webkit-box-align: start;
@@ -217,7 +219,6 @@ body {
 
 @media (max-width: 1200px) and (min-width: 1024px) {
   .hero__rectangle {
-    background-color: red;
     margin-left: 5em;
   }
   .hero__navlink {
@@ -227,7 +228,6 @@ body {
 
 @media (max-width: 1024px) and (min-width: 900px) {
   .hero__rectangle {
-    background-color: yellow;
     margin-left: 2em;
     padding: 30px;
   }
@@ -238,7 +238,6 @@ body {
 
 @media (max-width: 900px) and (min-width: 768px) {
   .hero__rectangle {
-    background-color: green;
     margin-left: 2em;
     padding: 30px;
   }
@@ -266,7 +265,6 @@ body {
 
 @media (max-width: 768px) and (min-width: 600px) {
   .hero__rectangle {
-    background-color: red;
     margin-left: 1em;
     padding: 30px;
   }
@@ -291,7 +289,6 @@ body {
 
 @media (max-width: 600px) and (min-width: 480px) {
   .hero__rectangle {
-    background-color: blue;
     margin-left: 1em;
     padding: 20px;
   }
@@ -325,7 +322,6 @@ body {
 
 @media (max-width: 480px) and (min-width: 320px) {
   .hero__rectangle {
-    background-color: red;
     margin-left: 1em;
     padding: 10px;
   }
