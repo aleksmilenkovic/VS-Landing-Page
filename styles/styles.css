@@ -209,12 +209,12 @@ body {
 }
 
 .mixology__img-cap1 {
-  font-size: 30px;
+  font-size: 26px;
   display: block;
   float: right;
   position: absolute;
-  top: 8em;
-  left: 15em;
+  top: 7em;
+  left: 17em;
 }
 
 @media (max-width: 1200px) and (min-width: 1024px) {
@@ -223,6 +223,10 @@ body {
   }
   .hero__navlink {
     font-size: 10px;
+  }
+  .mixology__img-cap1 {
+    font-size: 24px;
+    left: 15em;
   }
 }
 
@@ -233,6 +237,10 @@ body {
   }
   .hero__navlink {
     font-size: 10px;
+  }
+  .mixology__img-cap1 {
+    font-size: 20px;
+    left: 18em;
   }
 }
 
@@ -261,6 +269,11 @@ body {
   .hero__image {
     min-height: 30em;
   }
+  .mixology__img-cap1 {
+    font-size: 20px;
+    left: 15em;
+    top: 20em;
+  }
 }
 
 @media (max-width: 768px) and (min-width: 600px) {
@@ -285,6 +298,9 @@ body {
   .hero__image {
     min-height: 30em;
   }
+  .mixology__fig-cap1 {
+    font-size: 20px;
+  }
 }
 
 @media (max-width: 600px) and (min-width: 480px) {
@@ -308,6 +324,7 @@ body {
   }
   .hero__image {
     min-height: 30em;
+    background-size: cover;
   }
   .hero__breadcrumb {
     height: 8px;
@@ -317,6 +334,11 @@ body {
     border: 2px solid red;
     background-size: contain;
     margin: 0;
+  }
+  .mixology__img-cap1 {
+    font-size: 22px;
+    left: 14em;
+    text-align: center;
   }
 }
 
@@ -345,6 +367,17 @@ body {
   }
   .hero__image {
     min-height: 25em;
+    background-size: contain;
+  }
+  .mixology__img-cap1 {
+    font-size: 20px;
+    left: 15em;
+  }
+  .mixology__headline-up {
+    padding: 0;
+  }
+  .mixology__headline {
+    padding-left: 2.2em;
   }
 }
 /*# sourceMappingURL=styles.css.map */
