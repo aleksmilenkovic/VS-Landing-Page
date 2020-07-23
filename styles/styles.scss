@@ -84,7 +84,6 @@ body {
     align-items: center;
     background-color: rgb(19, 19, 19);
     color: ivory;
-    border: 2px solid yellow;
     height: 45vh;
     overflow: visible;
     padding: 50px;
@@ -92,7 +91,7 @@ body {
   }
 
   &__headline {
-    font-size: 55px;
+    font-size: 52px;
   }
   &__hyph {
     border: 2px solid yellow;
@@ -175,44 +174,30 @@ body {
     font-size: 1.2em;
   }
 
-  &__light {
-    position: relative;
-  }
-
   //////////////////////images-container//////////////////////
-  &__row {
+
+  &__light {
     display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    border: 3px solid blue;
-  }
-  &__images-container-col {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    border: 2px solid red;
-    flex-basis: 100%;
-    flex: 1;
+    flex-wrap: wrap;
   }
 
   &__fig1 {
-    margin-right: 15em;
+    position: relative;
   }
 
   &__img-cap1 {
-    font-size: 26px;
+    font-size: 24px;
     display: block;
     position: absolute;
-    top: 50%;
-    right: 57%;
+    top: 30%;
+    right: -21.5%;
   }
 
   &__fig2 {
-    margin-bottom: 5em;
     position: relative;
-    //margin-right: 3em;
+    align-self: flex-end;
   }
 
   &__img-cap2 {
@@ -222,11 +207,12 @@ body {
     font-size: 26px;
     display: block;
     color: white;
+    z-index: 9999;
   }
 
   &__fig3 {
     position: relative;
-    margin-top: 3em;
+    //align-self: flex-start;
   }
   &__img-cap3 {
     position: absolute;
@@ -235,6 +221,11 @@ body {
     font-size: 26px;
     display: block;
     color: white;
+    z-index: 9999;
+  }
+  &__dark {
+    background-color: black;
+    height: 20vh;
   }
 }
 
@@ -284,7 +275,7 @@ body {
       height: 10vh;
       position: fixed;
       bottom: 0;
-      z-index: 9999;
+      z-index: 99999;
       border-radius: 3px;
       //left: 1em;
     }
@@ -300,9 +291,18 @@ body {
     margin-top: 0;
     height: 40vh;
   }
+  .mixology {
+    &__light {
+      display: flex;
+      flex-direction: column;
+    }
+    &__fig1 {
+      align-self: flex-start;
+    }
+  }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .hero {
     height: 100vh;
     margin: 0;
@@ -311,6 +311,7 @@ body {
       left: 0;
       bottom: 0;
       width: 60%;
+      justify-content: flex-start;
     }
     &__headline {
       font-size: 30px;
@@ -326,8 +327,57 @@ body {
   }
   .pub__banner {
     background-image: url("../assets/RectangleMobile.png");
-    background-size: contain;
-    margin-top: 0;
+    background-size: cover;
+    margin-top: 1px;
+    height: 290px;
+  }
+  .mixology {
+    &__headline-up {
+      font-size: 3em;
+    }
+    &__headline-down {
+      font-size: 3em;
+    }
+  }
+}
+
+@media (max-width: 498px) {
+  .mixology {
+    &__img1 {
+      width: 100%;
+    }
+    &__img2 {
+      width: 100%;
+    }
+    &__img3 {
+      width: 100%;
+    }
+    &__fig1 {
+      flex-basis: 250px;
+      max-width: 250px;
+      min-width: 100px;
+    }
+    &__fig2 {
+      flex-basis: 250px;
+      max-width: 250px;
+      min-width: 100px;
+    }
+    &__img-cap1 {
+      right: -38%;
+      font-size: 21px;
+    }
+    &__img-cap2 {
+      font-size: 22px;
+    }
+    &__fig3 {
+      display: none;
+    }
+    &__mobile-menu-link {
+      font-size: 15px;
+    }
+    &__location-text-res {
+      font-size: 15px;
+    }
   }
 }
 
@@ -358,10 +408,10 @@ body {
       left: 1em;
     }
     &__mobile-menu-link {
-      font-size: 15px;
+      font-size: 13px;
     }
     &__location-text-res {
-      font-size: 15px;
+      font-size: 13px;
     }
   }
   .pub__banner {
@@ -370,5 +420,37 @@ body {
     background-size: cover;
     margin-top: 0;
     height: 200px;
+  }
+  .mixology {
+    &__fig3 {
+      display: none;
+    }
+    &__img1 {
+      width: 100%;
+    }
+    &__img2 {
+      width: 100%;
+    }
+    &__img3 {
+      width: 100%;
+    }
+    &__fig1 {
+      flex-basis: 250px;
+      max-width: 250px;
+      min-width: 100px;
+    }
+    &__img-cap1 {
+      right: -33%;
+      font-size: 20px;
+    }
+    &__img-cap2 {
+      font-size: 20px;
+    }
+
+    &__fig2 {
+      flex-basis: 250px;
+      max-width: 250px;
+      min-width: 100px;
+    }
   }
 }

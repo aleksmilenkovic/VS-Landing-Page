@@ -116,7 +116,6 @@ body {
           align-items: center;
   background-color: #131313;
   color: ivory;
-  border: 2px solid yellow;
   height: 45vh;
   overflow: visible;
   padding: 50px;
@@ -124,7 +123,7 @@ body {
 }
 
 .hero__headline {
-  font-size: 55px;
+  font-size: 52px;
 }
 
 .hero__hyph {
@@ -216,58 +215,35 @@ body {
 }
 
 .mixology__light {
-  position: relative;
-}
-
-.mixology__row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  width: 100%;
-  border: 3px solid blue;
-}
-
-.mixology__images-container-col {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 2px solid red;
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .mixology__fig1 {
-  margin-right: 15em;
+  position: relative;
 }
 
 .mixology__img-cap1 {
-  font-size: 26px;
+  font-size: 24px;
   display: block;
   position: absolute;
-  top: 50%;
-  right: 57%;
+  top: 30%;
+  right: -21.5%;
 }
 
 .mixology__fig2 {
-  margin-bottom: 5em;
   position: relative;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 
 .mixology__img-cap2 {
@@ -277,11 +253,11 @@ body {
   font-size: 26px;
   display: block;
   color: white;
+  z-index: 9999;
 }
 
 .mixology__fig3 {
   position: relative;
-  margin-top: 3em;
 }
 
 .mixology__img-cap3 {
@@ -291,6 +267,12 @@ body {
   font-size: 26px;
   display: block;
   color: white;
+  z-index: 9999;
+}
+
+.mixology__dark {
+  background-color: black;
+  height: 20vh;
 }
 
 @media (max-width: 1024px) {
@@ -337,7 +319,7 @@ body {
     height: 10vh;
     position: fixed;
     bottom: 0;
-    z-index: 9999;
+    z-index: 99999;
     border-radius: 3px;
   }
   .hero__mobile-menu-link {
@@ -351,9 +333,22 @@ body {
     margin-top: 0;
     height: 40vh;
   }
+  .mixology__light {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .mixology__fig1 {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .hero {
     height: 100vh;
     margin: 0;
@@ -363,6 +358,9 @@ body {
     left: 0;
     bottom: 0;
     width: 60%;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
   .hero__headline {
     font-size: 30px;
@@ -377,8 +375,55 @@ body {
   }
   .pub__banner {
     background-image: url("../assets/RectangleMobile.png");
-    background-size: contain;
-    margin-top: 0;
+    background-size: cover;
+    margin-top: 1px;
+    height: 290px;
+  }
+  .mixology__headline-up {
+    font-size: 3em;
+  }
+  .mixology__headline-down {
+    font-size: 3em;
+  }
+}
+
+@media (max-width: 498px) {
+  .mixology__img1 {
+    width: 100%;
+  }
+  .mixology__img2 {
+    width: 100%;
+  }
+  .mixology__img3 {
+    width: 100%;
+  }
+  .mixology__fig1 {
+    -ms-flex-preferred-size: 250px;
+        flex-basis: 250px;
+    max-width: 250px;
+    min-width: 100px;
+  }
+  .mixology__fig2 {
+    -ms-flex-preferred-size: 250px;
+        flex-basis: 250px;
+    max-width: 250px;
+    min-width: 100px;
+  }
+  .mixology__img-cap1 {
+    right: -38%;
+    font-size: 21px;
+  }
+  .mixology__img-cap2 {
+    font-size: 22px;
+  }
+  .mixology__fig3 {
+    display: none;
+  }
+  .mixology__mobile-menu-link {
+    font-size: 15px;
+  }
+  .mixology__location-text-res {
+    font-size: 15px;
   }
 }
 
@@ -410,10 +455,10 @@ body {
     left: 1em;
   }
   .hero__mobile-menu-link {
-    font-size: 15px;
+    font-size: 13px;
   }
   .hero__location-text-res {
-    font-size: 15px;
+    font-size: 13px;
   }
   .pub__banner {
     background-image: url("../assets/RectangleMobile.png");
@@ -421,6 +466,37 @@ body {
     background-size: cover;
     margin-top: 0;
     height: 200px;
+  }
+  .mixology__fig3 {
+    display: none;
+  }
+  .mixology__img1 {
+    width: 100%;
+  }
+  .mixology__img2 {
+    width: 100%;
+  }
+  .mixology__img3 {
+    width: 100%;
+  }
+  .mixology__fig1 {
+    -ms-flex-preferred-size: 250px;
+        flex-basis: 250px;
+    max-width: 250px;
+    min-width: 100px;
+  }
+  .mixology__img-cap1 {
+    right: -33%;
+    font-size: 20px;
+  }
+  .mixology__img-cap2 {
+    font-size: 20px;
+  }
+  .mixology__fig2 {
+    -ms-flex-preferred-size: 250px;
+        flex-basis: 250px;
+    max-width: 250px;
+    min-width: 100px;
   }
 }
 /*# sourceMappingURL=styles.css.map */
