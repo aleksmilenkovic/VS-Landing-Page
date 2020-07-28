@@ -14,25 +14,80 @@
           ><img class="hero__logo" src="./assets/logo.png" alt="logo-image"
         /></a>
         <nav class="hero__nav">
-          <ul class="hero__navlist">
+          <ul class="hero__mobile-menu">
+            <li class="hero__burger-icon">
+              <a class="hero__burger-button" href="#">
+                <div class="burger"></div>
+                <div class="burger"></div>
+                <div class="burger"></div>
+              </a>
+            </li>
+            <li><a class="hero__mobile-menu-link" href="#">MIXOLOGIE</a></li>
+            <li>
+              <div class="hero__location-res">
+                <span class="hero__location-text-res">TROUVER UN LIEU</span>
+              </div>
+            </li>
+          </ul>
+
+          <ul class="hero__navlist hero__navlist--active">
             <li class="hero__navitem">
-              <a class="hero__navlink" href="#">MIXOLOGIE</a>
+              <img
+                class="hero__img-link"
+                src="./assets/mob-nav-item1.png"
+                title="MyImage"
+                alt=""
+              />
+              <a class="hero__navlink" href="#"> MIXOLOGIE</a>
             </li>
             <span class="hero__navspan"> <b>/</b> </span>
             <li class="hero__navitem">
+              <img
+                class="hero__img-link"
+                src="./assets/mob-nav-item2.png"
+                title="MyImage"
+                alt=""
+              />
               <a class="hero__navlink" href="#">ÉVÈNEMENTS</a>
             </li>
             <span class="hero__navspan"> <b>/</b> </span>
             <li class="hero__navitem">
+              <img
+                class="hero__img-link"
+                src="./assets/mob-nav-item3.png"
+                title="MyImage"
+                alt=""
+              />
               <a class="hero__navlink" href="#">LIEUX</a>
             </li>
             <span class="hero__navspan"> <b>/</b> </span>
             <li class="hero__navitem">
+              <img
+                class="hero__img-link"
+                src="./assets/mob-nav-item4.png"
+                title="MyImage"
+                alt=""
+              />
               <a class="hero__navlink" href="#">LIFESTYLE</a>
             </li>
             <span class="hero__navspan"> <b>/</b> </span>
             <li class="hero__navitem">
+              <img
+                class="hero__img-link"
+                src="./assets/mob-nav-item5.png"
+                title="MyImage"
+                alt=""
+              />
               <a class="hero__navlink" href="#">MUSIQUE</a>
+            </li>
+            <li class="hero__navitem hero__navitem-visible">
+              <img
+                class="hero__img-link"
+                src="./assets/mob-nav-item6.png"
+                title="MyImage"
+                alt=""
+              />
+              <a class="hero__navlink" href="#">Tous les articles</a>
             </li>
           </ul>
 
@@ -67,22 +122,9 @@
             <li><div class="hero__breadcrumb"></div></li>
           </ul>
         </div>
-
-        <ul class="hero__mobile-menu">
-          <li class="hero__burger-icon">
-            <div class="burger"></div>
-            <div class="burger"></div>
-            <div class="burger"></div>
-          </li>
-          <li><a class="hero__mobile-menu-link" href="#">MIXOLOGIE</a></li>
-          <li>
-            <div class="hero__location-res">
-              <span class="hero__location-text-res">TROUVER UN LIEU</span>
-            </div>
-          </li>
-        </ul>
       </header>
     </section>
+
     <section class="pub">
       <div class="pub__banner"></div>
     </section>
@@ -138,5 +180,6 @@
 
       <div class="mixology__dark"></div>
     </section>
+    <script src="./main.js"></script>
   </body>
 </html>
